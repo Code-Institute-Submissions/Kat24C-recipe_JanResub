@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center text-purple">Share your recipes</h1> 
+{% for recipe in recipes %}
+    <div class="container-sm">
+    <h2>Recipe name: {{ recipe.name }}</h2> <p><p>{{ recipe.author }} {{ recipe.published }}</p></p>
+    <h3>Description: {{ recipe.recipe_description }}</h3>
+    <h3>Preparation Time:</h3> <p>{{ recipe.preparation }}</p>
+    <h4>Ingredients:</h4> 
+    <p>{{ recipe.ingredient }}</p>
+    <h4>Directions</h4>
+    <p>{{ recipe.directions }}</p>
+    </div>
+{% endfor %}
+{% endblock content %}
+

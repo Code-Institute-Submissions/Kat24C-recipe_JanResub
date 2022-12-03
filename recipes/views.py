@@ -1,18 +1,20 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import Recipe_pg
+from . import models
 # Create your views here.
 
 
 def recipe_break(request):
-    recipe = Recipe_pg.objects.all()
+    recipes = models.Recipe.objects.all()
     context = {
-        'recipe': recipe
+        'recipes': recipes
     }
-    return render(request, 'recipes/base.html', context)
+    return render(request, 'recipe_home.html', context)
 
 
-class RecipePost(generic.ListView):
-    model = Recipe_pg
-    template_engine = 'index.html'
-    paginate_by = 5
+def recipe_review(request):
+    reviews = models.Reviews.objects.all()
+    context = {
+        'reviews': reviews
+    }
+    return render(request, 'recipe_reviews.html', context)

@@ -1,3 +1,28 @@
 body {
-    background-color: aqua;
+    background-color: rgb(241, 157, 194);
+}
+
+
+h1 {
+    color: purple;
+    text-align: center;
+}
+
+p {
+    color: aqua;
+}
+
+.signup {
+    color: indigo;
+}
+
+.btn-signup {
+    background-color: #23BBBB;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
 }

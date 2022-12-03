@@ -1,12 +1,13 @@
 from django.contrib import admin
-from .models import Recipe_pg, Reviews
+from .models import Recipe, Reviews
 
 
-@admin.register(Recipe_pg)
+@admin.register(Recipe)
 class RecipeThings(admin.ModelAdmin):
-    list_display = ('name', 'recipe_description', 'preparation_cooking_time')
+    list_display = ('name', 'recipe_description', 'preparation')
 
 
 @admin.register(Reviews)
-class ReviewAdmin(admin.ModelAdmin):
+class Review_outline(admin.ModelAdmin):
     list_display = ('author', 'comment')
+    
