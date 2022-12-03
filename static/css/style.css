@@ -1,7 +1,10 @@
 body {
-    background-color: rgb(241, 157, 194);
+    background-color: rgb(31, 1, 14);
 }
 
+.container {
+    background-color: rgba(23, 5, 73, 0.363);
+}
 
 h1 {
     color: purple;
@@ -9,7 +12,7 @@ h1 {
 }
 
 p {
-    color: aqua;
+    color: rgb(87, 118, 177);
 }
 
 .signup {
@@ -17,12 +20,12 @@ p {
 }
 
 .btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
+    background-color: rgb(175, 223, 223);
+    color: rgb(178, 82, 247);
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
+    background-color:  rgb(178, 82, 247);
+    color: rgb(175, 223, 223);
 }

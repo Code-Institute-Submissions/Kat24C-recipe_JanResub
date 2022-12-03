@@ -10,4 +10,3 @@ class RecipeThings(admin.ModelAdmin):
 @admin.register(Reviews)
 class Review_outline(admin.ModelAdmin):
     list_display = ('author', 'comment')
-    
