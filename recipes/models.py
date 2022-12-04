@@ -19,4 +19,3 @@ class Recipe(models.Model):
 
     def getFull(self):
         return reverse("recipe-full", kwargs={"pk": self.pk})
-

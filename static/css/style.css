@@ -19,13 +19,17 @@ p {
     color: indigo;
 }
 
-.btn {
+input {
     background-color: rgb(175, 223, 223);
     color: rgb(178, 82, 247);
 }
 
-.btn-signup:hover,
-.btn-signup:active {
+.prewrap {
+    white-space: pre-wrap;
+}
+
+input:hover,
+input:active {
     background-color:  rgb(178, 82, 247);
     color: rgb(175, 223, 223);
 }

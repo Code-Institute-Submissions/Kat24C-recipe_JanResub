@@ -5,11 +5,18 @@
 <h1>Update Recipe</h1>
 <br/>
 <div class="container">
-   
+
    <form action="" method="POST">
       {% csrf_token %}
+      {% if rec.author.id == user.id %}
       {{ form.as_p }}
       <input type="submit" value="Edit" class="btn">
+      {% else %}
+      <h2>Login</h2> 
+      <p>Only the author can make changes to this recipe, please</p>
+      <a href="{% url 'recipe-home-pg' %}">Return to Recipe outline and login</a>
+      {% endif %}
+ 
 </div>
 
 {% endblock content %}
