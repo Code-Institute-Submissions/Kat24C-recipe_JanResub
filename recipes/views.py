@@ -60,3 +60,4 @@ def delete_recipe(request, recipe_id):
         return redirect(reverse('recipe-home-pg'))
 
     return render(request, 'delete_recipe.html', {'del_rec': del_rec})
+

@@ -1,23 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+{% load crispy_forms_tags %}
 <h1>Recipe</h1>
 
-    <div class="container-sm">
+    <div class="container">
     <h4>Recipe: {{ recipe.name }}</h4> <p><p>{{ recipe.author }} {{ recipe.published }}</p></p>
     <h4>Description: {{ recipe.recipe_description }}</h4>
     <h4>Preparation Time:</h4> <p>{{ recipe.preparation }}</p>
     <h5>Ingredients:</h5> 
-    <p>{{ recipe.ingredient }}</p>
+    <ul>
+        <li>{{ recipe.ingredient }}</li>
+    </ul>
     <h5>Directions</h5>
     <p>{{ recipe.directions }}</p>
     <a href="{% url 'recipe-home-pg' %}">Return to Recipe outline</a>
-    </div>
-    <p class="offset-sm-1 mt-4">Click 
+    <p class="mt-4">Click 
         <a  href="{% url 'recipe-delete' recipe.id %}">here</a> 
         to delete the recipe.
-    </p>  
-
+    </p> 
+    </div>
+    
 {% endblock content %}
 
