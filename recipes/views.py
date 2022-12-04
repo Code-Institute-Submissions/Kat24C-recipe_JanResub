@@ -27,7 +27,7 @@ def fullview(request, pk):
     return render(request, 'full_recipe.html', {'recipe': recipe})
 
 
-def AddRecipe(request, *args, **kwargs):
+def add_recipe(request, *args, **kwargs):
     adding_recipe = RecipeDetail()
     
     if request.method == "POST": 
@@ -51,3 +51,12 @@ def update_recipe(request, recipe_id):
         return redirect(reverse('recipe-home-pg'))
     
     return render(request, 'edit_recipe.html', {'rec': rec, 'form': form})
+
+
+def delete_recipe(request, recipe_id):
+    del_rec = models.Recipe.objects.get(pk=recipe_id)
+    if request.method == "POST":
+        del_rec.delete()
+        return redirect(reverse('recipe-home-pg'))
+
+    return render(request, 'delete_recipe.html', {'del_rec': del_rec})
