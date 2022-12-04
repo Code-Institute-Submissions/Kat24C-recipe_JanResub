@@ -11,7 +11,7 @@
 <div class="container">
 <h3>Add recipe</h3>
 <p>Posting as: {{ user.username }}</p>
-<form method="POST" action="{% url 'recipes-add' %}"style="margin-top: 1.3em;">
+<form method="POST" action="{% url 'recipes-add' %}" style="margin-top: 1.3em;">
    {{ adding_recipe | crispy }}
    {% csrf_token %}
 

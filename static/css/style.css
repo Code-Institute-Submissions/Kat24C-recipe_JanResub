@@ -19,6 +19,17 @@ p {
     color: indigo;
 }
 
+.btn {
+    background-color: rgb(175, 223, 223);
+    color: rgb(178, 82, 247);
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color:  rgb(178, 82, 247);
+    color: rgb(175, 223, 223);
+}
+
 .btn-signup {
     background-color: rgb(175, 223, 223);
     color: rgb(178, 82, 247);
