@@ -8,9 +8,11 @@
     <div class="container-sm mt-4">
     <h3>Recipe name: {{ recipe.name }}</h3> 
     <h5>Description: {{ recipe.recipe_description }}</h5>
-    <p class="offset-md-2 mt-4">If you would like to see the 
-        <a  href="{% url 'recipes-full' recipe.pk %}">full recipe</a> 
-     
+    <p class="offset-md-2 mt-4">Click 
+        <a  href="{% url 'recipes-full' recipe.pk %}">here</a> 
+        if you would like to see the full recipe.
+    </p>
+
     </div>
     
 {% endfor %}

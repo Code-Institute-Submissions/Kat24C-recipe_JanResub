@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+{% if commented %}
+<div class="alert alert-success" role="alert">
+   Add your recipe
+</div>
+{% else %}
+{% if user.is_authenticated %}
+<div class="container">
+<h3>Add recipe</h3>
+<p>Posting as: {{ user.username }}</p>
+<form method="POST" action="{% url 'recipes-add' %}"style="margin-top: 1.3em;">
+   {{ adding_recipe | crispy }}
+   {% csrf_token %}
+
+   <input type="submit" class="btn-signup btn-bg"></input>
+</form>
+</div>
+{% endif %}
+{% endif %}
+{% endblock content %}

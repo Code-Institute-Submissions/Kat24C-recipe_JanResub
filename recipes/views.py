@@ -1,8 +1,7 @@
-from django.shortcuts import render, get_object_or_404
-from django.views.generic.detail import DetailView
-from django.views.generic import ListView
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.views import generic, View
 from . import models
-from .forms import ReviewDetail
+from .forms import RecipeDetail
 # Create your views here.
 
 
@@ -12,9 +11,10 @@ def recipe_break(request):
         'recipes': recipes
     }
     return render(request, 'recipe_home.html', context)
+    paginate_by = 6
 
 
-class recipe_full(ListView):
+class recipe_full(generic.ListView):
     model = models.Recipe
     template_name = 'recipe_home.html'
     context_object_name = 'recipes'
@@ -25,3 +25,18 @@ def fullview(request, pk):
     recipe = get_object_or_404(model, pk=pk)
     return render(request, 'full_recipe.html', {'recipe': recipe})
 
+
+def AddRecipe(request, *args, **kwargs):
+    adding_recipe = RecipeDetail()
+    
+    if request.method == "POST": 
+        adding_recipe = RecipeDetail(request.POST)
+        if adding_recipe.is_valid():
+            r = adding_recipe.save(commit=False)
+            r.author = request.user
+            r.Recipe = models.Recipe
+            r.save()
+    
+        return redirect(reverse('recipe-home-pg'))
+    
+    return render(request, 'add_recipe.html', {"adding_recipe": adding_recipe})

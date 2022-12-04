@@ -6,4 +6,5 @@ from . import views
 urlpatterns = [
     path('', views.recipe_break, name='recipe-home-pg'),
     path('recipe/<int:pk>', views.fullview, name='recipes-full'),
+    path('add/', views.AddRecipe, name='recipes-add'),
 ]

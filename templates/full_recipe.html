@@ -5,15 +5,15 @@
 <h1>Recipe</h1>
 
     <div class="container-sm">
-    <h3>Recipe: {{ recipe.name }}</h3> <p><p>{{ recipe.author }} {{ recipe.published }}</p></p>
+    <h4>Recipe: {{ recipe.name }}</h4> <p><p>{{ recipe.author }} {{ recipe.published }}</p></p>
     <h4>Description: {{ recipe.recipe_description }}</h4>
     <h4>Preparation Time:</h4> <p>{{ recipe.preparation }}</p>
     <h5>Ingredients:</h5> 
     <p>{{ recipe.ingredient }}</p>
     <h5>Directions</h5>
     <p>{{ recipe.directions }}</p>
+    <a href="{% url 'recipe-home-pg' %}">Return to Recipe outline</a>
     </div>
-
 
 {% endblock content %}
 

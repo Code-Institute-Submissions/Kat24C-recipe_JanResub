@@ -10,7 +10,7 @@ class Recipe(models.Model):
     preparation = models.CharField(max_length=100)
     ingredient = models.TextField(max_length=600)
     directions = models.TextField()
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     published = models.DateTimeField(auto_now=True)
 
     def __str__(self):

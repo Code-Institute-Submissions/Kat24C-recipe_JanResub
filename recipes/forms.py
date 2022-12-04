@@ -1,8 +1,8 @@
-from .models import Reviews
+from .models import Recipe
 from django import forms
 
 
-class ReviewDetail(forms.ModelForm):
+class RecipeDetail(forms.ModelForm):
     class Meta:
-        model = Reviews
-        fields = ('author', 'comment',)
+        model = Recipe
+        fields = ('name', 'recipe_description', 'preparation', 'ingredient', 'directions',)
