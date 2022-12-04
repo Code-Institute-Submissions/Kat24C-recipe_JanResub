@@ -11,8 +11,11 @@
     <p class="offset-md-2 mt-4">Click 
         <a  href="{% url 'recipes-full' recipe.pk %}">here</a> 
         if you would like to see the full recipe.
-    </p>
-
+    </p>   
+    <p class="offset-md-2 mt-4">Click 
+        <a  href="{% url 'recipes-edit' recipe.id %}">here</a> 
+        to edit the recipe.
+    </p>   
     </div>
     
 {% endfor %}

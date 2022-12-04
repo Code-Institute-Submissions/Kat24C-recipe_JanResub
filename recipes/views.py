@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from . import models
 from .forms import RecipeDetail
+from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
 
@@ -40,3 +41,13 @@ def AddRecipe(request, *args, **kwargs):
         return redirect(reverse('recipe-home-pg'))
     
     return render(request, 'add_recipe.html', {"adding_recipe": adding_recipe})
+
+
+def update_recipe(request, recipe_id):
+    rec = models.Recipe.objects.get(pk=recipe_id)
+    form = RecipeDetail(request.POST or None, instance=rec)
+    if form.is_valid():
+        form.save()
+        return redirect(reverse('recipe-home-pg'))
+    
+    return render(request, 'edit_recipe.html', {'rec': rec, 'form': form})
