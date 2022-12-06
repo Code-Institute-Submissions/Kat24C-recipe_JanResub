@@ -87,7 +87,7 @@ p {
     font-weight: bold;
     margin-top: 6px;
     margin-bottom: 6px;
-    margin-left: 44%;
+    text-align: center;
 }
 
 .btn-signup:hover,
