@@ -5,7 +5,7 @@ Users can look at recipes and decide what they like. They can ass their own reci
 they no longer want to change it. 
 
 https://fun-recipe.herokuapp.com/
-
+<img src="assets/images/responsive.jpg" width=80% alt="responsive design">
 
 ### User stories
  * The user will be able to look at and search for recipes. 
