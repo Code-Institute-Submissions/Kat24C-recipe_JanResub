@@ -4,13 +4,13 @@
 
 <h1>Update Recipe</h1>
 <br/>
-<div class="container">
+<div class="container1 indi">
 
    <form action="" method="POST">
       {% csrf_token %}
       {% if rec.author.id == user.id %}
       {{ form.as_p }}
-      <input type="submit" value="Edit" class="btn">
+      <input type="submit" value="Edit" class="btn-signup">
       {% else %}
       <h2>Login</h2> 
       <p>Only the author can make changes to this recipe, please</p>

@@ -8,8 +8,9 @@
 </div>
 {% else %}
 {% if user.is_authenticated %}
-<div class="container">
-<h3>Add recipe</h3>
+<h1>Add recipe</h1>
+<div class="container puro">
+
 <p>Posting as: {{ user.username }}</p>
 <form method="POST" action="{% url 'recipes-add' %}" style="margin-top: 1.3em;">
    {{ adding_recipe | crispy }}

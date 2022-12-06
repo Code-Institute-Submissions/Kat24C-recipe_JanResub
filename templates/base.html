@@ -23,9 +23,9 @@
     {% endif %}
 </head>
     <body>
-      <ul class="nav justify-content-end bg-info .text-info">
+      <ul class="nav justify-content-end bg-dark">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'recipe-home-pg' %}">Recipes</a>
+          <a class="nav-link active hoover" aria-current="page" href="{% url 'recipe-home-pg' %}">Recipes</a>
         </li>
         {% if user.is_authenticated %}
         <li class="nav-item">

@@ -10,8 +10,8 @@ def recipe_break(request):
     context = {
         'recipes': recipes
     }
-    return render(request, 'recipe_home.html', context)
     paginate_by = 6
+    return render(request, 'recipe_home.html', context)
 
 
 class recipe_full(generic.ListView):

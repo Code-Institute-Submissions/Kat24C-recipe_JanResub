@@ -1,42 +1,89 @@
 body {
-    background-color: rgb(31, 1, 14);
+    background-color: #F9FAFC;
 }
 
 .container {
-    background-color: rgba(23, 5, 73, 0.363);
+    max-width: 1200px;
+    width: 100%;
+    padding-top: 1%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
+.container1 {
+    max-width: 800px;
+    width: 100%;
+    padding-top: 1%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 h1 {
-    color: purple;
+    color: indigo;
     text-align: center;
 }
 
+h2, h3 {
+    color:rgb(12, 20, 31);
+}
+
+h5 { 
+    color:rgb(36, 1, 117);
+}
+
 p {
-    color: rgb(87, 118, 177);
+    color: rgb(0, 0, 0);
+}
+
+.bg-dark {
+    background-color: #422e9d;
+}
+
+.border {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 46%;
+    font-size: larger;
+}
+
+.light_p {
+    background-color: rgb(167, 129, 218);
+}
+
+.puro { 
+    background-color: rgb(170, 147, 221);
+}
+
+.indi {
+    background-color: rgb(202, 217, 240);
+}
+
+.blue-i {
+    background-color: rgb(149, 189, 250);
 }
 
 .signup {
     color: indigo;
 }
 
-input {
-    background-color: rgb(175, 223, 223);
-    color: rgb(178, 82, 247);
-}
-
 .prewrap {
     white-space: pre-wrap;
 }
 
-input:hover,
-input:active {
-    background-color:  rgb(178, 82, 247);
-    color: rgb(175, 223, 223);
-}
+/* Add colour, hover and active to the buttons and navbar */
+
 
 .btn-signup {
     background-color: rgb(175, 223, 223);
-    color: rgb(178, 82, 247);
+    color: rgb(53, 11, 83);
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 44%;
 }
 
 .btn-signup:hover,
@@ -44,3 +91,36 @@ input:active {
     background-color:  rgb(178, 82, 247);
     color: rgb(175, 223, 223);
 }
+
+
+
+.btn-sign {
+    background-color: rgb(175, 223, 223);
+    color: rgb(51, 92, 204);
+    font-size: x-large;
+    margin: 7px 1em 6px 40%;
+    padding: 2px 5px 1px 5px;
+    text-decoration: underline; 
+}
+
+.btn-sign:hover,
+.btn-sign:active {
+    background-color:  rgb(134, 28, 51);
+    color: rgb(175, 223, 223);
+}
+
+.btn-signs {
+    background-color: rgb(175, 223, 223);
+    font-size: x-large;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    
+}
+
+.btn-signs:hover,
+.btn-signs:active {
+    background-color:  rgb(66, 165, 144);
+}
+
+
+
