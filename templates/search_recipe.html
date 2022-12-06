@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   
+        {% if search %}
+            <h1>You searched for {{ search }}</h1>
+    <div class="container indi">    
+            <h3 class="center">Showing results: </h3>
+        {% for recipe in srecipes %}
+            <h3><a href="{% url 'recipe-home-pg' %}">{{ recipe.name }}</a></h3>
+        {% endfor %} 
+        <br/>
+        <br/>
+        <p>If no results, please return to <a href="{% url 'recipe-home-pg' %}">recipe page</a> </p>      
+        {% else %}
+            <h3>Please search for a recipe or return to 
+                <a href="{% url 'recipe-home-pg' %}">recipes.</a></h3>
+        {% endif %}
+    </div>
+
+
+{% endblock content %}

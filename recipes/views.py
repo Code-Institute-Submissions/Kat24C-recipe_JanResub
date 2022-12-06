@@ -58,3 +58,13 @@ def delete_recipe(request, recipe_id):
         return redirect(reverse('recipe-home-pg'))
 
     return render(request, 'delete_recipe.html', {'del_rec': del_rec})
+
+
+def recipe_search(request):
+    search = request.GET.get('search', '')
+    if search:
+        srecipes = models.Recipe.objects.all().filter(name__icontains=search)
+        return render(request, 'search_recipe.html', {
+            'search': search, 'srecipes': srecipes})
+    else:
+        return render(request, 'search_recipe.html', {})

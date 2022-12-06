@@ -38,6 +38,10 @@ p {
     color: rgb(0, 0, 0);
 }
 
+.center {
+    text-align: center;
+}
+
 .bg-dark {
     background-color: #422e9d;
 }
@@ -58,7 +62,7 @@ p {
 }
 
 .indi {
-    background-color: rgb(202, 217, 240);
+    background-color: rgb(202, 220, 240);
 }
 
 .blue-i {
