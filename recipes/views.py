@@ -63,7 +63,7 @@ def delete_recipe(request, recipe_id):
 def recipe_search(request):
     search = request.GET.get('search', '')
     if search:
-        srecipes = models.Recipe.objects.all().filter(name__icontains=search)
+        srecipes = models.Recipe.objects.filter(name__icontains=search)
         return render(request, 'search_recipe.html', {
             'search': search, 'srecipes': srecipes})
     else:
