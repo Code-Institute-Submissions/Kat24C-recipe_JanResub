@@ -9,16 +9,10 @@
    
    <form method="POST" style="margin-top: 1.3em;">
       {% csrf_token %}
-      {% if del_rec.author.id == user.id %}
-         <h1> Are you sure you want to delete? </h1>
-         <input type="submit" value="Delete" class="btn-sign"></input>
-         <button  class="btn-signs"><a href="{% url 'recipe-home-pg' %}">No go back</a></button>
-      {% else %}
-         <h2>Login</h2> 
-         <p>Only the author can delete this recipe, please</p>
-         <a href="{% url 'recipe-home-pg' %}">Return to Recipe outline and login</a>         
-      {% endif %}  
-     
+      <h1> Are you sure you want to delete? </h1>
+      <input type="submit" value="Delete" class="btn-sign"></input>
+      <button  class="btn-signs"><a href="{% url 'recipe-home-pg' %}">No go back</a></button>
+          
    </form>
    </div>   
 

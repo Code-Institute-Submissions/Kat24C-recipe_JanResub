@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from . import models
+from django.core.paginator import Paginator
 from .forms import RecipeDetail
 # Create your views here.
 
@@ -10,7 +11,8 @@ def recipe_break(request):
     context = {
         'recipes': recipes
     }
-    paginate_by = 6
+    recipe_list = models.Recipe.objects.all()
+    paginator = Paginator(recipe_list, 3)
     return render(request, 'recipe_home.html', context)
 
 
@@ -18,7 +20,7 @@ class recipe_full(generic.ListView):
     model = models.Recipe
     template_name = 'recipe_home.html'
     context_object_name = 'recipes'
-
+ 
 
 def fullview(request, pk):
     model = models.Recipe

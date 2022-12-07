@@ -13,9 +13,3 @@ class TestViews(TestCase):
         response = self.client.get('/add')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'add_recipe.html')
-
-    def test_get_edit_recipe_page(self):
-        recipe = Recipe.objects.create(name='Test Recipe')
-        response = self.client.get(f'edit/{recipe_id}')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'edit_recipe.html')

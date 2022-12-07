@@ -14,10 +14,16 @@
     <p class="prewrap">{{ recipe.directions }}</p>
     <a href="{% url 'recipe-home-pg' %}">Return to Recipe outline</a>
     
+    {% if recipe.author.id == user.id %}
     <p class="mt-4">Click 
         <a  href="{% url 'recipe-delete' recipe.id %}">here</a> 
         to delete the recipe.
     </p> 
+    <p class="mt-2">Click 
+        <a  href="{% url 'recipes-edit' recipe.id %}">here</a> 
+        to edit the recipe.
+    </p> 
+    {% endif %}
     </div>
     
 {% endblock content %}
