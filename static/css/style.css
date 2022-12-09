@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&family=Ubuntu&display=swap');
+
+/* Basic body link */
+
 body {
     background-color: #F9FAFC;
+    font-family: Ubuntu, 'Courier New', sans-serif;
 }
+
+/* A simple container */
 
 .container {
     max-width: 1200px;
@@ -21,9 +28,13 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
+
+/* Font size, colour and positioning */
+
 h1 {
     color: indigo;
     text-align: center;
+    font-family: 'Rubik Gemstones', 'Courier New', sans-serif;
 }
 
 h2, h3 {
@@ -35,15 +46,11 @@ h5 {
 }
 
 p {
-    color: rgb(0, 0, 0);
+    color: rgb(20, 26, 58);
 }
 
 .center {
     text-align: center;
-}
-
-.bg-dark {
-    background-color: #422e9d;
 }
 
 .border {
@@ -51,6 +58,12 @@ p {
     margin-bottom: 1em;
     margin-left: 46%;
     font-size: larger;
+}
+
+/* Background colours */
+
+.bg-dark {
+    background-color: #422e9d;
 }
 
 .light_p {
@@ -73,12 +86,12 @@ p {
     color: indigo;
 }
 
+/* Will place ingredients as a list if user has pressed enter */
 .prewrap {
     white-space: pre-wrap;
 }
 
 /* Add colour, hover and active to the buttons and navbar */
-
 
 .btn-signup {
     background-color: rgb(175, 223, 223);
@@ -125,6 +138,4 @@ p {
 .btn-signs:active {
     background-color:  rgb(66, 165, 144);
 }
-
-
 

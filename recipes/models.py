@@ -6,6 +6,11 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Recipe(models.Model):
+    """
+    A recipe model asking for the basic needs of a recipe.
+    Include name, preparation, ingredients and directions.
+    Giving a big space for the ingredients and directions.
+    """
     name = models.CharField(max_length=100, unique=True, blank=False)
     recipe_description = models.CharField(max_length=200)
     preparation = models.CharField(max_length=100)

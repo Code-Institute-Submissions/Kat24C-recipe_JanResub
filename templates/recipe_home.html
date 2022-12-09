@@ -1,24 +1,30 @@
 {% extends 'base.html' %}
-
 {% block content %}
-
 {% load crispy_forms_tags %}
-<h1 class="text-center text-purple">Share your recipes</h1> 
-{% for recipe in recipes %}
-    <div class="container mt-4 light_p">
-        <div class="row">
-        <div class="col-8">
-            <h3>Recipe name: {{ recipe.name }}</h3> 
-            <h5>Description: {{ recipe.recipe_description }}</h5>
-            <p class="mt-2">Click 
-                <a  href="{% url 'recipes-full' recipe.pk %}">here</a> 
-                if you would like to see the full recipe.
-            </p>   
-              
-            </div>
-        </div>
+<h1 class="text-center text-purple">Share your recipes</h1>
+<!-- A for loop that runs through the recipes -->
+{% for recipe in recpage %}
+<div class="container mt-4 light_p">
+  <div class="row">
+    <div class="col-8">
+      <h3>Recipe name: {{ recipe.name }}</h3>
+      <h5>Description: {{ recipe.recipe_description }}</h5>
+      <!-- A link to the full recipe-->
+      <p class="mt-2">Click 
+        <a  href="{% url 'recipes-full' recipe.pk %}">here</a> 
+        if you would like to see the full recipe.
+      </p>
     </div>
-    
+  </div>
+</div>
 {% endfor %}
+</br>
+<!-- Pagination, so there will only be so many recipes per page -->
+{% if recpage.has_previous %}
+  <a class="page-item text-secondary" href="?page={{ recpage.previous_page_number }}" > Previous &laquo </a>
+{% endif %}
+Page: {{ recpage.number }} of {{ recpage.paginator.num_pages }}
+{% if recpage.has_next %}
+  <a class="page-item text-secondary" href="?page={{ recpage.next_page_number }}">&raquo; Next </a> 
+{% endif %}
 {% endblock content %}
-

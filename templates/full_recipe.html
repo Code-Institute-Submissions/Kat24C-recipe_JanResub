@@ -2,6 +2,8 @@
 
 {% block content %}
 {% load crispy_forms_tags %}
+
+<!-- Full recipe -->
 <h1>Recipe</h1>
 
     <div class="container blue-i">
@@ -13,7 +15,7 @@
     <h5>Directions</h5>
     <p class="prewrap">{{ recipe.directions }}</p>
     <a href="{% url 'recipe-home-pg' %}">Return to Recipe outline</a>
-    
+<!-- Only give access to the author of the recipes to delete and edit -->
     {% if recipe.author.id == user.id %}
     <p class="mt-4">Click 
         <a  href="{% url 'recipe-delete' recipe.id %}">here</a> 

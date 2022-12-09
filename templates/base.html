@@ -23,6 +23,7 @@
     {% endif %}
 </head>
     <body>
+      <!-- Navigation to the recipe page and add recipe page. -->
       <ul class="nav justify-content-end bg-dark">
         <li class="nav-item">
           <a class="nav-link active hoover" aria-current="page" href="{% url 'recipe-home-pg' %}">Recipes</a>
@@ -31,6 +32,7 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'recipes-add' %}">Add Recipes</a>
         </li>
+<!-- Basic navigation using allauth to sign in, login and logout -->
           <li class="nav-item">
             <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
           </li>

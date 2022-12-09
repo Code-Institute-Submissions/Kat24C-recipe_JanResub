@@ -4,7 +4,7 @@ from . import views
 'full_recipe.html'
 'edit_recipe.html'
 
-
+# Creates a route between views.py and the templates
 urlpatterns = [
     path('recipes_break', views.recipe_break, name='recipes_break'),
     path('', views.recipe_break, name='recipe-home-pg'),

@@ -6,13 +6,16 @@ from .forms import RecipeDetail
 # Create your views here.
 
 
+# Links to recipe home: a break down of the recipes.
 def recipe_break(request):
-    recipes = models.Recipe.objects.all()
+    recipes = models.Recipe.objects.all().order_by('id')
+    num = Paginator(recipes, 4)
+    page = request.GET.get('page')
+    recpage = num.get_page(page)
     context = {
-        'recipes': recipes
+        'recipes': recipes,
+        'recpage': recpage
     }
-    recipe_list = models.Recipe.objects.all()
-    paginator = Paginator(recipe_list, 3)
     return render(request, 'recipe_home.html', context)
 
 
@@ -20,14 +23,16 @@ class recipe_full(generic.ListView):
     model = models.Recipe
     template_name = 'recipe_home.html'
     context_object_name = 'recipes'
- 
 
+
+# A link to view the full recipe.
 def fullview(request, pk):
     model = models.Recipe
     recipe = get_object_or_404(model, pk=pk)
     return render(request, 'full_recipe.html', {'recipe': recipe})
 
 
+# A link to add the recipes, only when signed in.
 def add_recipe(request, *args, **kwargs):
     adding_recipe = RecipeDetail()
     if request.method == "POST":
@@ -43,6 +48,7 @@ def add_recipe(request, *args, **kwargs):
     return render(request, 'add_recipe.html', {"adding_recipe": adding_recipe})
 
 
+# Author can update their recipe and returns to home page.
 def update_recipe(request, recipe_id):
     rec = models.Recipe.objects.get(pk=recipe_id)
     form = RecipeDetail(request.POST or None, instance=rec)
@@ -53,6 +59,7 @@ def update_recipe(request, recipe_id):
     return render(request, 'edit_recipe.html', {'rec': rec, 'form': form})
 
 
+# Author is able to delete their recipe.
 def delete_recipe(request, recipe_id):
     del_rec = models.Recipe.objects.get(pk=recipe_id)
     if request.method == "POST":
@@ -62,6 +69,7 @@ def delete_recipe(request, recipe_id):
     return render(request, 'delete_recipe.html', {'del_rec': del_rec})
 
 
+# A simple search bar, that isnot case sensitive.
 def recipe_search(request):
     search = request.GET.get('search', '')
     if search:

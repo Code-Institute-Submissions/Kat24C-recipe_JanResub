@@ -7,9 +7,12 @@
    Add your recipe
 </div>
 {% else %}
+<!-- Add authentication so that the user must be logged in -->
 {% if user.is_authenticated %}
 <h1>Add recipe</h1>
 <div class="container puro">
+
+<!-- Users are able to add their own recipes only when logged in -->
 
 <p>Posting as: {{ user.username }}</p>
 <form method="POST" action="{% url 'recipes-add' %}" style="margin-top: 1.3em;">
