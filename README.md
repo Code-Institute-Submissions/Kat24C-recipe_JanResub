@@ -80,8 +80,11 @@ https://fun-recipe.herokuapp.com/
 
 ## Bugs
 ### Solved Bugs
-
+ * When I deployed my app my css was not deploying with it. 
+  * I had not remove disable_collect static. Once I removed this it worked. 
+ 
 ### Remaining Bugs
+ * There are no remaining bugs. 
 
 ### Validator Testing
  * By running my project through lighthouse in devtool, I confirmed that the colours and fonts are easy to read and accessible. 
@@ -125,5 +128,15 @@ This project was deployed early using Code Institute's mock terminal for Heroku
 
 ## Credits
  * Code institute for the deployment terminal
- * Code institute Hello Django and I think before I blog.  
+ * Code institute Hello Django and I think before I blog. 
+ * https://docs.djangoproject.com
+ * https://learn.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api
+ * Codemy - Create a search bar. 
+ * https://docs.djangoproject.com
+ * https://learn.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api
+ * https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html
+ * CodingEntrepreneurs - Try django 
+ * The Dumbfounds - Django testing tutorial
+ * https://getbootstrap.com/docs/5.2/getting-started/introduction/
+ * Dom Vacchiano - Django tutorial for beginners/Django full stack
  
