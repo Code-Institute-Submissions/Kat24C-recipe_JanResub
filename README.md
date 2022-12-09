@@ -1,10 +1,11 @@
 # Recipe Share
 Recipe share is a website to keep and share your favourite recipes, which uses the Code Institute mock terminal on Heroku to run. 
 
-Users can look at recipes and decide what they like. They can ass their own recipes, edit if there are any changes and delete if 
+Users can look at recipes and decide what they like. They can add their own recipes, read it,  edit if there are any changes and delete if 
 they no longer want to change it. 
 
 https://fun-recipe.herokuapp.com/
+
 <img src="assets/images/responsive.jpg" width=50% alt="responsive design">
 
 ### User stories
@@ -16,9 +17,53 @@ https://fun-recipe.herokuapp.com/
 
 
 ## How to use the app
- * The user reads the recipes without logging in. 
- * When they have logged in they will be able to add their own recipes. 
+### Before login
 
+ * The user will be able to see the name and a basic description of the recipe on the home page
+
+<img src="assets/images/home.jpg" width=50% alt="Home recipe page">
+
+ * The user will be able to search for the type of recipe they would like. 
+ 
+ <img src="assets/images/search.jpg" width=50% alt="Search bar">
+
+ * When the user clicks on here to see the recipe, they will be taken to the full recipe.
+ * While logged out they wont be able to add, delete or edit recipes. 
+
+<img src="assets/images/recipe_no_user.jpg" width=50% alt="Recipe page when not logged on">
+
+### Signing up
+
+ * The user is able to sign up. 
+ * The user must give their username and make a password, which they will need to confirm. 
+ 
+<img src="assets/images/sign.jpg" width=50% alt="Sign up page">
+ 
+### Logout and login
+
+ * The user is able to logout and login when needed.
+ 
+<img src="assets/images/signout.jpg" width=50% alt="Logout">
+ 
+<img src="assets/images/signup.jpg" width=50% alt="Login page">
+
+### When the user is logged in 
+ * When the user is logged in they are able to add their own recipes and share it with others. 
+ 
+<img src="assets/images/add.jpg" width=50% alt="Add recipe page">
+  
+ * Only the author of the recipe will see the edit and delete buttons. 
+ 
+<img src="assets/images/recipe.jpg" width=50% alt="Logged in recipe page"> 
+   
+  * The author will be able to update their recipes when needed. 
+   
+<img src="assets/images/update.jpg" width=50% alt="Update recipe picture"> 
+
+* The author will be able to delete their recipes if they no longer wish to share it. 
+
+<img src="assets/images/delete.jpg" width=50% alt="Delete recipe picture">
+   
 ## Features
  *  Users need can find recipes online. 
  * A nice place for the user to store their recipes. 
