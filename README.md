@@ -84,6 +84,20 @@ https://fun-recipe.herokuapp.com/
 ### Remaining Bugs
 
 ### Validator Testing
+ * By running my project through lighthouse in devtool, I confirmed that the colours and fonts are easy to read and accessible. 
+ * CSS
+   * No errors were found when running the css code through jigsaw W3C code validator
+ * HTML
+   * No errors were found when running the html code through validator W3
+* Python
+  * Ran linter in gitpod recipe, had 2 long lines in settings which were imported when I installed django. 
+  * Ran automated testing using tests.py = test_views, test_models and test_forms  
+* Accessibility
+  * By running my project through lighthouse in devtool, I confirmed that the colours and fonts are easy to read and accessible. 
+
+<img src="assets/images/test.jpg" width=50% alt="Own testing">
+<img src="assets/images/linter.jpg" width=50% alt="Linter testing">
+<img src="assets/images/lighthouse.jpg" width=50% alt="Lighthouse testing">
 
 ## Deployment
 This project was deployed early using Code Institute's mock terminal for Heroku
@@ -100,10 +114,14 @@ This project was deployed early using Code Institute's mock terminal for Heroku
   * Check if manual deploy is on main otherwise set to main. 
   * Click on Deploy Branch
  #### Steps for final deployment:
-  * Start by making a database using ElephantSQL. 
-  * Then create a new Heroku app. 
+  * Change Debug to False
+  * git add . git commit -m and git push your code to github
   * Click on settings and Go to Convig Vars
-  * S
+  * Remove Disable_collectstatic
+  * Go to Deploy at the top of your page. 
+  * Once in Deploy go to the bottom and click on Deploy Branch. 
+  * View you build log. 
+  * Once the app has launched wait 30 seconds and open your app. 
 
 ## Credits
  * Code institute for the deployment terminal
