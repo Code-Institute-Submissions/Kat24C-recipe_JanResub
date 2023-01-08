@@ -9,5 +9,3 @@ class RecipeThings(admin.ModelAdmin):
     and preparation. Created a superuser.
     """
     list_display = ('name', 'recipe_description', 'preparation')
-
-
