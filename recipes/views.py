@@ -41,7 +41,7 @@ def add_recipe(request, *args, **kwargs):
             r = adding_recipe.save(commit=False)
             r.author = request.user
             r.Recipe = models.Recipe
-            r.save()
+            r.save()      
 
         return redirect(reverse('recipe-home-pg'))
 
@@ -51,10 +51,13 @@ def add_recipe(request, *args, **kwargs):
 # Author can update their recipe and returns to home page.
 def update_recipe(request, recipe_id):
     rec = models.Recipe.objects.get(pk=recipe_id)
-    form = RecipeDetail(request.POST or None, instance=rec)
-    if form.is_valid():
-        form.save()
-        return redirect(reverse('recipe-home-pg'))
+    if request.user.id == rec.author.id:
+        form = RecipeDetail(request.POST or None, instance=rec)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('recipe-home-pg'))
+    else:
+        return redirect(reverse('recipe-home-pg'))   
 
     return render(request, 'edit_recipe.html', {'rec': rec, 'form': form})
 
@@ -62,8 +65,11 @@ def update_recipe(request, recipe_id):
 # Author is able to delete their recipe.
 def delete_recipe(request, recipe_id):
     del_rec = models.Recipe.objects.get(pk=recipe_id)
-    if request.method == "POST":
-        del_rec.delete()
+    if request.user.id == del_rec.author.id:
+        if request.method == "POST":
+            del_rec.delete()
+            return redirect(reverse('recipe-home-pg'))
+    else:
         return redirect(reverse('recipe-home-pg'))
 
     return render(request, 'delete_recipe.html', {'del_rec': del_rec})
