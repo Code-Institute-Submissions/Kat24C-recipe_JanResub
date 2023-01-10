@@ -43,7 +43,7 @@ def add_recipe(request, *args, **kwargs):
                 r.author = request.user
                 r.Recipe = models.Recipe
                 r.save()
-            
+
             return redirect(reverse('recipe-home-pg'))
     else:
 
