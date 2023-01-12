@@ -2,10 +2,11 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <h1 class="text-center text-purple">Share your recipes</h1>
+
 <!-- A for loop that runs through the recipes -->
 {% for recipe in recpage %}
 <div class="container mt-4 light_p">
-  <div class="row">
+   <div class="row">
     <div class="col-8">
       <h3>Recipe name: {{ recipe.name }}</h3>
       <h5>Description: {{ recipe.recipe_description }}</h5>
