@@ -3,7 +3,7 @@
 /* Basic body link */
 
 body {
-    background-image: url('https://res.cloudinary.com/katgacoop/image/upload/v1673689816/rachel-park-hrlvr2ZlUNk-unsplash.jpg_irwad6.jpg');
+    background-image: url('https://res.cloudinary.com/katgacoop/image/upload/v1673690511/rachel-park-hrlvr2ZlUNk-unsplash_opac_z0ns8i.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -35,7 +35,7 @@ body {
 /* Font size, colour and positioning */
 
 h1 {
-    color: rgb(241, 200, 224);
+    color: rgb(153, 14, 95);
     text-align: center;
     font-family: Lobster , 'Courier New', sans-serif;
 }
