@@ -7,7 +7,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: 130%;   
 }
 
 /* A simple container */
@@ -141,4 +140,5 @@ p {
 .btn-signs:active {
     background-color:  rgb(66, 165, 144);
 }
+
 
