@@ -29,7 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'recipes',
 ]
 
+
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
@@ -74,6 +75,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'recipe_share.urls'
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 TEMPLATES = [
     {
