@@ -132,6 +132,7 @@ This project was deployed early using Code Institute's mock terminal for Heroku
  * Code institute for the deployment terminal
  * Code institute Hello Django and I think before I blog. 
  * https://docs.djangoproject.com
+ * https://ordinarycoders.com/blog/article/django-messages-framework
  * https://learn.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api
  * Codemy - Create a search bar. 
  * https://docs.djangoproject.com
@@ -142,4 +143,4 @@ This project was deployed early using Code Institute's mock terminal for Heroku
  * https://getbootstrap.com/docs/5.2/getting-started/introduction/
  * Dom Vacchiano - Django tutorial for beginners/Django full stack
  * Background image from https://unsplash.com/
- 
+ * Slackoverflow for css animation of messages
