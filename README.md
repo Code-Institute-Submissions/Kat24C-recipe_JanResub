@@ -21,7 +21,7 @@ https://fun-recipe.herokuapp.com/
 
  * The user will be able to see the name and a basic description of the recipe on the home page
 
-<img src="assets/images/home.jpg" width=50% alt="Home recipe page">
+<img src="assets/images/home.JPG" width=50% alt="Home recipe page">
 
  * The user will be able to search for the type of recipe they would like. 
  
@@ -71,17 +71,19 @@ https://fun-recipe.herokuapp.com/
  ## Testing
  
  ### User story testing
- * The user is able to search for recipes. 
- * The user is able to edit the recipe if they have made errors or need to make changes. 
- * The user is able to delete the recipes when they no longer want to share it. 
- * The user can sign-up, login and logout when needed. 
- * The user author is the only one who can edit and delete their recipe.
+ * The user is able to search for recipes using the search bar and any word/letter from the recipe. 
+ * The author is able to edit the recipe if they have made errors or need to make changes. Only the author can edit the recipe by going into the full recipe. 
+ * The author is able to delete the recipes when they no longer want to share it by finding the delete button in the full recipe. 
+ * You do not need to sign-up or login to view the recipes.
+ * The user can sign-up, login and logout if they want to add, delete or edit any recipes
 
 
 ## Bugs
 ### Solved Bugs
  * When I deployed my app my css was not deploying with it. 
-  * I had not remove disable_collect static. Once I removed this it worked. 
+ * I had not remove disable_collect static. Once I removed this it worked. 
+ * You could enter the edit and delete section by adding it in the url. 
+ * I fixed this by adding an if and else statement to allow only the author to enter. 
  
 ### Remaining Bugs
  * There are no remaining bugs. 
@@ -139,4 +141,5 @@ This project was deployed early using Code Institute's mock terminal for Heroku
  * The Dumbfounds - Django testing tutorial
  * https://getbootstrap.com/docs/5.2/getting-started/introduction/
  * Dom Vacchiano - Django tutorial for beginners/Django full stack
+ * Background image from https://unsplash.com/
  
