@@ -23,14 +23,14 @@
     {% endif %}
 </head>
     <body>
-      <!-- Navigation to the recipe page and add recipe page. -->
+    <!-- Navigation to the recipe page and add recipe page. -->
       <ul class="nav justify-content-end bg-dark ">
         <li class="nav-item">
           <a class="nav-link active hoover" aria-current="page" href="{% url 'recipe-home-pg' %}">Recipes</a>
         </li>
         {% if user.is_authenticated %}
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'recipes-add' %}">Add Recipes</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'recipes-add' %}">Add Recipe</a>
         </li>
 <!-- Basic navigation using allauth to sign in, login and logout -->
           <li class="nav-item">
@@ -53,6 +53,15 @@
         </li>
       </ul>
       <div>
+        <div class="timer">
+          {% if messages %}
+            <ul class="messages">
+          {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
       {% block content %}
       {% endblock content %}
       </div>

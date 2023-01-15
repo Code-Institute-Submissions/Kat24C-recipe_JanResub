@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from . import models
+from django.contrib import messages
 from django.core.paginator import Paginator
 from .forms import RecipeDetail
 # Create your views here.
@@ -44,9 +45,10 @@ def add_recipe(request, *args, **kwargs):
                 r.Recipe = models.Recipe
                 r.save()
 
+            messages.success(request, "Recipe has been added")
             return redirect(reverse('recipe-home-pg'))
     else:
-
+        messages.error(request, "Sign in to add a recipe")
         return redirect(reverse('recipe-home-pg'))
 
     return render(request, 'add_recipe.html', {"adding_recipe": adding_recipe})
@@ -59,8 +61,10 @@ def update_recipe(request, recipe_id):
         form = RecipeDetail(request.POST or None, instance=rec)
         if form.is_valid():
             form.save()
+            messages.success(request, "Recipe has been updated")
             return redirect(reverse('recipe-home-pg'))
     else:
+        messages.error(request, "You are not logged in as the author of this recipe.")
         return redirect(reverse('recipe-home-pg'))
 
     return render(request, 'edit_recipe.html', {'rec': rec, 'form': form})
@@ -72,8 +76,10 @@ def delete_recipe(request, recipe_id):
     if request.user.id == del_rec.author.id:
         if request.method == "POST":
             del_rec.delete()
+            messages.success(request, "Recipe has been deleted")
             return redirect(reverse('recipe-home-pg'))
     else:
+        messages.error(request, "You are not logged in as the author of this recipe.")
         return redirect(reverse('recipe-home-pg'))
 
     return render(request, 'delete_recipe.html', {'del_rec': del_rec})

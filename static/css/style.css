@@ -56,11 +56,25 @@ p {
     text-align: center;
 }
 
-.border {
-    display: block;
-    margin-bottom: 1em;
-    margin-left: 46%;
-    font-size: larger;
+.messages {
+    color: #422e9d;
+    text-align: center;
+    font-size: x-large;
+}
+
+.timer {
+    -webkit-animation: cssAnimation 6s forwards; 
+    animation: cssAnimation 6s forwards;
+}
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 0.5;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 0.5;}
+    100% {opacity: 0;}
 }
 
 /* Background colours */
@@ -100,6 +114,7 @@ p {
     padding-right: 15px;
     padding-left: 15px;
     background-color: rgb(207, 183, 235);
+    margin: 0 auto;
 }
 
 /* Add colour, hover and active to the buttons and navbar */
