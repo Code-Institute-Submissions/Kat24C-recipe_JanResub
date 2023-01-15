@@ -94,6 +94,14 @@ p {
     white-space: pre-wrap;
 }
 
+.page_turner {
+    max-width: 200px;
+    width: 30%;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: rgb(207, 183, 235);
+}
+
 /* Add colour, hover and active to the buttons and navbar */
 
 .btn-signup {
